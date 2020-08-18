@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{Tgqd:function(t,n,o){"use strict";o.d(n,"a",(function(){return e}));var r=o("Lnxd"),e=function(t){return Object(r.a)({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"circle",attr:{cx:"12",cy:"12",r:"10"}},{tag:"polyline",attr:{points:"12 6 12 12 16 14"}}]})(t)};e.displayName="FiClock"}}]);
+//# sourceMappingURL=5e2a4920-4343d58bfbb6934c3387.js.map
