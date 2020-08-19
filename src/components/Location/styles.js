@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const InfosWork = styled.div`
     font-size: 1.5rem;
     color: rgb(127, 143, 159);
     font-weight: 300;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 `;
 
@@ -37,7 +37,7 @@ export const Adress = styled.div`
   margin-top: 1.5rem;
 `;
 
-export const OpenOrClose = styled.span`
+export const Open = styled.span`
   font-size: 1.6rem;
   display: flex;
   align-self: center;
@@ -46,6 +46,22 @@ export const OpenOrClose = styled.span`
   padding: 0.8rem;
   color: #fff;
   border: 1px solid var(--open-color);
+  border-radius: 0.5rem;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+`;
+
+export const Close = styled.span`
+  font-size: 1.6rem;
+  display: flex;
+  align-self: center;
+
+  background-color: var(--close-color);
+  padding: 0.8rem;
+  color: #fff;
+  border: 1px solid var(--close-color);
   border-radius: 0.5rem;
 
   svg {

@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from "react";
 
-import { Container, MenuList, MenuItemLink, MenuItemLabel } from './styles';
+import { Container, MenuList, MenuItemLink, MenuItemLabel } from "./styles";
 
-import links from './content';
+import links from "./content";
 
 function Menu() {
-  const [menuActive, setMenuActive] = useState('');
-
   return (
     <Container>
       <MenuList>

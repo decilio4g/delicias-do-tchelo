@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import GlobalStyles from '../../styles/global';
+import GlobalStyles from "../../styles/global";
 
-import { Container, Main } from './styles';
-import BottomNavigator from '../BottomNavigator';
+import { Container, Main } from "./styles";
 
 const Layout = ({ children }) => {
   return (
@@ -15,7 +14,6 @@ const Layout = ({ children }) => {
         src="https://static.goomer.app/stores/25998/products/mobile_menu/templates/44361/logo_v1593120997.png"
         alt=""
       />
-      {/* <BottomNavigator /> */}
     </Container>
   );
 };

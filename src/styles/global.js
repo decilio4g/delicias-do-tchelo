@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
   --primary-color: red;
   --open-color: #4caf50;
+  --close-color: #e10000;
   --color-text: rgb(127, 143, 159);
   --color-title: rgb(48, 51, 60);
 
