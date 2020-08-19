@@ -1,46 +1,82 @@
-import React, { useState } from 'react';
-import Select from 'react-select';
-import { navigate } from '@reach/router';
+import React, { useState } from "react";
+import Select from "react-select";
+import { navigate } from "@reach/router";
 
-import Pasteis from './content';
+import MenuListPastel from "./MenuList";
+import {
+  Carne,
+  Pernil,
+  Palmito,
+  Queijo,
+  Frango,
+  Pizza,
+  Calabresa,
+  Brocolis,
+} from "./content";
 
 import {
   Container,
   MenuList,
   Menu,
   MenuTitle,
-  MenuItem,
-  Imagem,
-  Infos,
   Header,
   SelectInput,
-} from './styles';
+} from "./styles";
 
 const options = [
-  { value: 'Carne', label: 'Carne' },
-  { value: 'Frango', label: 'Frango' },
-  { value: 'Calabresa', label: 'Calabresa' },
+  { value: "Carne", label: "Carne" },
+  { value: "Pernil", label: "Pernil" },
+  { value: "Palmito", label: "Palmito" },
+  { value: "Queijo", label: "Queijo" },
+  { value: "Frango", label: "Frango" },
+  { value: "Pizza", label: "Pizza" },
+  { value: "Calabresa", label: "Calabresa" },
+  { value: "Brocolis", label: "Brócolis" },
 ];
 
 function Pastel() {
   function getPastel(pastel) {
     switch (pastel) {
-      case 'Carne':
+      case "Carne":
         setSelectedPastel(pastel);
-        navigate('#carne');
+        navigate("#carne");
         break;
-      case 'Frango':
+      case "Pernil":
         setSelectedPastel(pastel);
-        navigate('#frango');
+        navigate("#pernil");
         break;
-      case 'Calabresa':
+      case "Palmito":
         setSelectedPastel(pastel);
-        navigate('#calabresa');
+        navigate("#palmito");
+        break;
+      case "Queijo":
+        setSelectedPastel(pastel);
+        navigate("#queijo");
+        break;
+      case "Frango":
+        setSelectedPastel(pastel);
+        navigate("#frango");
+        break;
+      case "Pizza":
+        setSelectedPastel(pastel);
+        navigate("#pizza");
+        break;
+      case "Calabresa":
+        setSelectedPastel(pastel);
+        navigate("#calabresa");
+        break;
+      case "Brócolis":
+        setSelectedPastel(pastel);
+        navigate("#brocolis");
+        break;
+      default:
+        setSelectedPastel(pastel);
+        navigate("#carne");
         break;
     }
   }
 
-  const [selectedPastel, setSelectedPastel] = useState('Carne');
+  const [selectedPastel, setSelectedPastel] = useState("");
 
   return (
     <Container>
@@ -58,127 +94,53 @@ function Pastel() {
             options={options}
           />
         </SelectInput>
-        <Menu>
-          {Pasteis.map((pastel) => {
-            return (
-              <MenuItem key={pastel.name}>
-                <Imagem>
-                  <img src={pastel.imagem} alt="Um pastelzão" />
-                </Imagem>
-
-                <Infos>
-                  <h2>{pastel.name}</h2>
-                  <p>{pastel.descrição}</p>
-                  <strong>{pastel.preço}</strong>
-                  <span>Número: {pastel.numero}</span>
-                </Infos>
-              </MenuItem>
-            );
-          })}
-        </Menu>
 
         <a href="#" id="carne" />
-        <h1>Pastéis de Carne</h1>
+        <h1>Pastel de Carne</h1>
         <Menu>
-          {Pasteis.map((pastel) => {
-            return (
-              <MenuItem key={pastel.name}>
-                <Imagem>
-                  <img src={pastel.imagem} alt="Um pastelzão" />
-                </Imagem>
+          <MenuListPastel Pasteis={Carne} />
+        </Menu>
 
-                <Infos>
-                  <h2>{pastel.name}</h2>
-                  <p>{pastel.descrição}</p>
-                  <strong>{pastel.preço}</strong>
-                  <span>Número: {pastel.numero}</span>
-                </Infos>
-              </MenuItem>
-            );
-          })}
+        <a href="#" id="pernil" />
+        <h1>Pastel de Pernil</h1>
+        <Menu>
+          <MenuListPastel Pasteis={Pernil} />
+        </Menu>
+
+        <a href="#" id="palmito" />
+        <h1>Pastel de Palmito</h1>
+        <Menu>
+          <MenuListPastel Pasteis={Palmito} />
+        </Menu>
+
+        <a href="#" id="queijo" />
+        <h1>Pastel de queijo</h1>
+        <Menu>
+          <MenuListPastel Pasteis={Queijo} />
         </Menu>
 
         <a href="#" id="frango" />
-        <h1>Pastéis de Frango</h1>
+        <h1>Pastel de frango</h1>
         <Menu>
-          {Pasteis.map((pastel) => {
-            return (
-              <MenuItem key={pastel.name}>
-                <Imagem>
-                  <img src={pastel.imagem} alt="Um pastelzão" />
-                </Imagem>
+          <MenuListPastel Pasteis={Frango} />
+        </Menu>
 
-                <Infos>
-                  <h2>{pastel.name}</h2>
-                  <p>{pastel.descrição}</p>
-                  <strong>{pastel.preço}</strong>
-                  <span>Número: {pastel.numero}</span>
-                </Infos>
-              </MenuItem>
-            );
-          })}
+        <a href="#" id="pizza" />
+        <h1>Pastel de pizza</h1>
+        <Menu>
+          <MenuListPastel Pasteis={Pizza} />
         </Menu>
 
         <a href="#" id="calabresa" />
-        <h1>Pastéis de Calabresa</h1>
+        <h1>Pastel de calabresa</h1>
         <Menu>
-          {Pasteis.map((pastel) => {
-            return (
-              <MenuItem key={pastel.name}>
-                <Imagem>
-                  <img src={pastel.imagem} alt="Um pastelzão" />
-                </Imagem>
-
-                <Infos>
-                  <h2>{pastel.name}</h2>
-                  <p>{pastel.descrição}</p>
-                  <strong>{pastel.preço}</strong>
-                  <span>Número: {pastel.numero}</span>
-                </Infos>
-              </MenuItem>
-            );
-          })}
+          <MenuListPastel Pasteis={Calabresa} />
         </Menu>
 
-        <h1>Pastéis de Calabresa</h1>
+        <a href="#" id="brocolis" />
+        <h1>Pastel de Brócolis</h1>
         <Menu>
-          <a href="#" id="calabresa" />
-          {Pasteis.map((pastel) => {
-            return (
-              <MenuItem key={pastel.name}>
-                <Imagem>
-                  <img src={pastel.imagem} alt="Um pastelzão" />
-                </Imagem>
-
-                <Infos>
-                  <h2>{pastel.name}</h2>
-                  <p>{pastel.descrição}</p>
-                  <strong>{pastel.preço}</strong>
-                  <span>Número: {pastel.numero}</span>
-                </Infos>
-              </MenuItem>
-            );
-          })}
-        </Menu>
-        <h1>Pastéis de Calabresa</h1>
-        <Menu>
-          <a href="#" id="calabresa" />
-          {Pasteis.map((pastel) => {
-            return (
-              <MenuItem key={pastel.name}>
-                <Imagem>
-                  <img src={pastel.imagem} alt="Um pastelzão" />
-                </Imagem>
-
-                <Infos>
-                  <h2>{pastel.name}</h2>
-                  <p>{pastel.descrição}</p>
-                  <strong>{pastel.preço}</strong>
-                  <span>Número: {pastel.numero}</span>
-                </Infos>
-              </MenuItem>
-            );
-          })}
+          <MenuListPastel Pasteis={Brocolis} />
         </Menu>
       </MenuList>
     </Container>

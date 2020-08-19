@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-default",
-  "private": false,
+  "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
@@ -16,7 +16,7 @@
     "gatsby-transformer-sharp": "^2.5.1",
     "netlify-cms-app": "^2.12.19",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
+    "react": "^16.13.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-icons": "^3.10.0",
