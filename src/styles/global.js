@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
   --primary-color: red;
   --open-color: #4caf50;
-  --close-color: #e10000;
+  --close-color: #e60000;
   --color-text: rgb(127, 143, 159);
   --color-title: rgb(48, 51, 60);
 

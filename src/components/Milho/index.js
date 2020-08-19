@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import Milhos from './content';
+import Milhos from "./content";
 
 import {
   Container,
@@ -11,7 +11,7 @@ import {
   Imagem,
   Infos,
   Header,
-} from './styles';
+} from "./styles";
 
 function Pastel() {
   return (
@@ -23,7 +23,7 @@ function Pastel() {
         <Menu>
           {Milhos.map((milho) => {
             return (
-              <MenuItem>
+              <MenuItem key={milho.name}>
                 <Imagem>
                   <img src={milho.imagem} alt="Um milhozão" />
                 </Imagem>

@@ -3,16 +3,23 @@ import React from "react";
 import { GoLocation } from "react-icons/go";
 import { GiKnifeFork } from "react-icons/gi";
 import { FiClock } from "react-icons/fi";
-import { format } from "date-fns";
 
 import { Container, InfosWork, Type, Adress, Open, Close } from "./styles";
 
 const Location = () => {
   function getTime() {
     const day = new Date().getDay();
+    if (day === 1 || day === 2 || day === 3 || day === 4) {
+      return (
+        <Close>
+          <FiClock />
+          Fechado
+        </Close>
+      );
+    }
 
-    if (day === 2 || day === 6 || day === 7) {
-      if (new Date().getHours() >= 5 && new Date().getHours() <= 22) {
+    if (day === 0 || day === 5 || day === 6) {
+      if (new Date().getHours() >= 5 && new Date().getHours() <= 21) {
         return (
           <Open>
             <FiClock />
@@ -29,8 +36,7 @@ const Location = () => {
       }
     }
   }
-  getTime();
-  console.log(new Date());
+
   return (
     <Container className="">
       <InfosWork>

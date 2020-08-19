@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import Batata from './content';
+import Batata from "./content";
 
 import {
   Container,
@@ -11,7 +11,7 @@ import {
   Imagem,
   Infos,
   Header,
-} from './styles';
+} from "./styles";
 
 function Pastel() {
   return (
@@ -23,7 +23,7 @@ function Pastel() {
         <Menu>
           {Batata.map((batata) => {
             return (
-              <MenuItem>
+              <MenuItem key={batata.name}>
                 <Imagem>
                   <img src={batata.imagem} alt="Um milhozão" />
                 </Imagem>
